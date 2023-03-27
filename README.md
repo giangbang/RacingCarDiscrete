@@ -1,2 +1,4 @@
 # RacingCarDiscrete
-RacingCar gym environment with discrete action space
+RacingCar gym environment with discrete action space.
+
+Since the version of `gym>=0.25.0`, the `RacingCar` environment is supported for both discrete and continuous, of which only continuous action space is available prior to `0.25`. However, the `gym` API also has drastic changes since this version. More specifically, `env.step(action)` now returns a tuple of 5 elements, including two new elements `terminated` and `truncated`. In addition, most of the currently popular RL libraries has not adapted to this new standard, this makes experimenting with discrete RacingCar very difficult for these libraries. This repo is aimed at temporally maintain a quick discrete RacingCar while waiting for the integration of these popular RL libraries to fully support the new Gym and Gymnasium versions.
